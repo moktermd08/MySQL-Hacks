@@ -1,0 +1,24 @@
+
+# to create single database dump 
+mysqldump -u [dbusername] -p db_name > db_backup.sql
+
+
+# to downlaod all the databases in the server 
+mysqldump -u [dbusername] -p --all-databases > all_db_backup.sql
+
+
+#if you want to zip the newly created dump 
+mysqldump -u [dbusername] -p db_name | gzip > db_backup.sql.gz
+
+# You must have gzip module installed in your server 
+
+
+
+#download from remote host to you local computer 
+mysqldump -h databasehostaddress -u dbusername -p db_name > /home/username/dbname.sql
+
+
+#databasehostaddress example : ip address 
+
+#Please do not forget to give appropiate url for the folder path where dump will be stored 
+
